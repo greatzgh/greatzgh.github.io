@@ -106,8 +106,6 @@
         <div class="container">
             <div class=" row" >
 			
-			<canvas id="particles-js-canvas" style="position:absolute;z-index:1;top:0px;left:0px;" width="100%" height="50%"></canvas>
-			
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" style="z-index:2;">
                 
 				
@@ -164,62 +162,6 @@
         </div>
   
 </header>
-
-<script>
-    document.addEventListener('touchmove', function (e) {
-        e.preventDefault()
-    })
-	var hder = document.getElementById('headerid');
-    var c = document.getElementsByTagName('canvas')[0],
-        x = c.getContext('2d'),
-        pr = window.devicePixelRatio || 1,
-        w = window.innerWidth,
-		
-        h = window.innerHeight/2,
-        f = 90,
-        q,
-        m = Math,
-        r = 0,
-        u = m.PI*2,
-        v = m.cos,
-        z = m.random
-    c.width = w*pr
-    c.height = h*pr
-    x.scale(pr, pr)
-    x.globalAlpha = 0.6
-    function i(){
-	    var hder = document.getElementById('headerid');
-		if(hder)
-	    {
-   		h = hder.clientHeight;
-		c.height = h*pr;
-		}
-        x.clearRect(0,0,w,h)
-        q=[{x:0,y:h*.7+f},{x:0,y:h*.7-f}]
-        while(q[1].x<w+f) d(q[0], q[1])
-    }
-    function d(i,j){   
-        x.beginPath()
-        x.moveTo(i.x, i.y)
-        x.lineTo(j.x, j.y)
-        var k = j.x + (z()*2-0.25)*f,
-            n = y(j.y)
-        x.lineTo(k, n)
-        x.closePath()
-        r-=u/-50
-        x.fillStyle = '#'+(v(r)*127+128<<16 | v(r+u/3)*127+128<<8 | v(r+u/3*2)*127+128).toString(16)
-        x.fill()
-        q[0] = q[1]
-        q[1] = {x:k,y:n}
-    }
-    function y(p){
-        var t = p + (z()*2-1.1)*f
-        return (t>h||t<0) ? y(p) : t
-    }
-    document.onclick = i
-    document.ontouchstart = i
-    i()
-</script>
 
 	
     <!-- Navigation -->
@@ -356,6 +298,39 @@
 
 
 <div class="w3-row-padding">
+	<a href="/2019/12/10/Redis面试/">
+        <h2 class="post-title">
+            Redis面试
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+	</a>
+
+<div>
+
+    <a href="/2019/12/10/Redis面试/">
+
+        <div class="post-content-preview">
+            Redis1. 为啥在项目中使用Redis?​    因为传统的关系型数据库如MySQL已经不能适用所有的场景了，比如秒杀的库存扣减，APP首页的访问流量高峰等等，都很容易把数据库打崩，所以引入了缓存中间件，目前市面上比较常用的缓存中间件有 Redis 和 Memcached 不过中和考虑了他们的优缺点，最后选择了Redis。
+2. Redis支持的数据类型？
+String字符串：
+格.........
+        </div>
+    </a>
+    
+        <p class="post-meta">
+            Posted by 朱广辉 on
+            2019-12-10
+        </p>
+    
+
+</div>
+</div>
+<hr>
+
+
+<div class="w3-row-padding">
 	<a href="/2019/12/08/hello-world/">
         <h2 class="post-title">
             Hello World
@@ -471,6 +446,10 @@
     <ul>
       
         <li>
+          <a href="/2019/12/10/Redis%E9%9D%A2%E8%AF%95/">Redis面试</a>
+        </li>
+      
+        <li>
           <a href="/2019/12/08/hello-world/">Hello World</a>
         </li>
       
@@ -482,7 +461,7 @@
         
     <h5>归档</h5>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a><span class="archive-list-count">2</span></li></ul>
     </div>
 
         <hr>
