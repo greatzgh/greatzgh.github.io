@@ -329,6 +329,10 @@
                 <!-- Pager -->
                 <ul class="pager">
                     
+                        <li class="previous">
+                            <a href="/2019/12/14/Maven/" data-toggle="tooltip" data-placement="top" title="Maven总结">&larr; 上一篇</a>
+                        </li>
+                    
                     
                         <li class="next">
                             <a href="/2019/12/11/fastDFS/" data-toggle="tooltip" data-placement="top" title="FastDFS面试题">下一篇 &rarr;</a>
@@ -524,7 +528,7 @@
                             if (String(snum).length == 1) {
                                 snum = "0" + snum;
                             }
-                            document.getElementById("timeDate").innerHTML = "站长已飞行" + dnum + " 天 ";
+                            document.getElementById("timeDate").innerHTML = "站长已飞行 " + dnum + " 天 ";
                             document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
                         }
                         setInterval("createtime()", 250);

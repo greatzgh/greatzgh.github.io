@@ -298,6 +298,50 @@
 
 
 <div class="w3-row-padding">
+	<a href="/2019/12/14/Maven/">
+        <h2 class="post-title">
+            Maven总结
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+	</a>
+
+<div>
+
+    <a href="/2019/12/14/Maven/">
+
+        <div class="post-content-preview">
+            Maven总结Maven核心功能
+依赖管理
+项目构建
+Maven自身集成Tomcat插件，可对项目进行编译、打包、测试、安装等操作
+使用命令可以对项目进行一键构建，操作系统中无需安装Eclipse和Tomcat
+
+
+
+jar包冲突问题?
+Maven默认处理策略
+​    最短路径优先
+​    最先声明优先
+
+移除依赖
+在pom.xml中使用 &lt;exclusion&gt;标签去排.........
+        </div>
+    </a>
+    
+        <p class="post-meta">
+            Posted by zgh on
+            2019-12-14
+        </p>
+    
+
+</div>
+</div>
+<hr>
+
+
+<div class="w3-row-padding">
 	<a href="/2019/12/11/MVC/">
         <h2 class="post-title">
             MVC面试
@@ -441,7 +485,7 @@
             
         
             
-            <a href="/tags/面试" title="面试" rel="2">面试</a>
+            <a href="/tags/面试" title="面试" rel="3">面试</a>
             
         
             
@@ -450,6 +494,10 @@
         
             
             <a href="/tags/MVC" title="MVC" rel="1">MVC</a>
+            
+        
+            
+            <a href="/tags/Maven" title="Maven" rel="1">Maven</a>
             
         
     </div>
@@ -515,6 +563,10 @@
     <ul>
       
         <li>
+          <a href="/2019/12/14/Maven/">Maven总结</a>
+        </li>
+      
+        <li>
           <a href="/2019/12/11/MVC/">MVC面试</a>
         </li>
       
@@ -534,7 +586,7 @@
         
     <h5>归档</h5>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a><span class="archive-list-count">4</span></li></ul>
     </div>
 
         <hr>
@@ -632,7 +684,7 @@
                             if (String(snum).length == 1) {
                                 snum = "0" + snum;
                             }
-                            document.getElementById("timeDate").innerHTML = "站长已飞行" + dnum + " 天 ";
+                            document.getElementById("timeDate").innerHTML = "站长已飞行 " + dnum + " 天 ";
                             document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
                         }
                         setInterval("createtime()", 250);
