@@ -15,11 +15,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          敏捷开发简介 - 青争|编程
+          FastDFS面试题 - 青争|编程
         
     </title>
 
-    <link rel="canonical" href="http://yoursite.com/uncategorized/AgileDev">
+    <link rel="canonical" href="http://yoursite.com/2019/12/11/fastDFS/">
 
     <!-- Bootstrap Core CSS -->
 
@@ -117,14 +117,18 @@
                     <div class="post-heading" style="padding:40px">
                         <div class="tags">
                             
-                              <a class="tag" href="/tags/敏捷开发" title="敏捷开发">敏捷开发</a>
+                              <a class="tag" href="/tags/FastDFS" title="FastDFS">FastDFS</a>
+                            
+                              <a class="tag" href="/tags/面试" title="面试">面试</a>
+                            
+                              <a class="tag" href="/tags/分布式" title="分布式">分布式</a>
                             
                         </div>
-                        <h1>敏捷开发简介</h1>
+                        <h1>FastDFS面试题</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by zgh on
-                            2019-12-14
+                            2019-12-11
                         </span>
                     </div>
                 
@@ -287,74 +291,53 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <p>个人理解，随时更新。。。</p>
-<h1 id="敏捷开发简介"><a href="#敏捷开发简介" class="headerlink" title="敏捷开发简介"></a>敏捷开发简介</h1><p><strong>传统瀑布式开发</strong>，一般经历从需求分析到设计，再到编码实现、提交等几个步骤，前面的步骤对后面的如何工作起到了决定性作用，因此特点就是依赖性、耦合性非常强，改需求就是程序员的噩耗（由此我们常常听到产品经理和程序员打架的事情…）</p>
-<h3 id="一，什么是敏捷开发？"><a href="#一，什么是敏捷开发？" class="headerlink" title="一，什么是敏捷开发？"></a><strong>一，什么是敏捷开发？</strong></h3><p><strong><a href="https://baike.baidu.com/item/敏捷软件开发/7108658?fr=aladdin" target="_blank" rel="noopener">敏捷开发</a></strong> ，英文全称是：Agile software development。</p>
-<p>​    用官方的介绍就是：具体名称、理念、过程、术语都不尽相同，相对于“非敏捷”，更强调程序员团队与业务专家之间的紧密协作、面对面的沟通（认为比书面的文档更有效）、频繁交付新的软件版本、紧凑而自我组织型的团队、能够很好地适应需求变化的代码编写和团队组织方法，也更注重软件开发过程中人的作用。</p>
-<pre><code>敏捷开发不是写代码很快，而是一种模式，是一种能**应对快速变化需求**的软件开发能力。敏捷开发通常在大公司才能运行起来，使用敏捷开发时通常部门分布明确（部门、项目组、小团队）；人员定位明确（部长、项目经理、TeamLeader、开发、测试等等）；个人任务明确，人与人之间互不影响；通过各个会议（每天、半天、每周、每月）进行讨论和总结；代码提交严格，不合格就返回重新修改，直到提交成功。</code></pre><p>​    </p>
-<h3 id="二，使用场景？"><a href="#二，使用场景？" class="headerlink" title="二，使用场景？"></a><strong>二，使用场景？</strong></h3><ul>
-<li>项目规模相对庞大</li>
-<li>团队规模较大</li>
-<li>职能部门较完善<ul>
-<li>前端研发</li>
-<li>后端研发</li>
-<li>测试团队</li>
-<li>产品调研</li>
-<li>架构组</li>
-<li>运维部门</li>
-<li>运营部门</li>
-<li>视觉传达</li>
-<li>移动端团队</li>
-<li>售前团队</li>
-<li>售后团队</li>
-</ul>
-</li>
-<li>对项目研发效率要求较高<ul>
-<li>项目相关文档迭代速度较快</li>
-<li>项目相关文档规模较大<ul>
-<li>市场分析</li>
-<li>风险评估</li>
-<li>受众分析</li>
-<li>竞品分析</li>
-<li>接口文档</li>
-<li>需求文档</li>
-<li>架构api</li>
-<li>视觉资源</li>
-</ul>
-</li>
-<li>跨部门协同<ul>
-<li>部门在同一个办公场地，但没有穿插权限</li>
-<li>部门不在一个办公场地</li>
-<li>部门人数超级多，没办法准确找到对应的人</li>
-</ul>
+                <h1 id="fastDFS面试"><a href="#fastDFS面试" class="headerlink" title="fastDFS面试"></a>fastDFS面试</h1><h3 id="什么是分布式文件系统"><a href="#什么是分布式文件系统" class="headerlink" title="什么是分布式文件系统"></a>什么是分布式文件系统</h3><ul>
+<li><p><strong>什么是文件系统</strong></p>
+<pre><code>​    文件系统是负责管理和存储文件的系统软件，操作系统通过文件系统提供的接口去存取文件，用户通过操作系统访问磁盘上的文件 </code></pre><p> 常见的文件系统：FAT16/FAT32、NTFS、HFS、UFS、APFS、XFS、Ext4等  </p>
 </li>
 </ul>
-</li>
-</ul>
-<h3 id="三，敏捷内容"><a href="#三，敏捷内容" class="headerlink" title="三，敏捷内容"></a>三，敏捷内容</h3><p>devops 持续集成</p>
 <ul>
-<li>软件加持<ul>
-<li>git</li>
-<li>gitlab</li>
-<li>rap</li>
-<li>node</li>
-<li>npm</li>
-<li>gitbook</li>
-<li>markdown</li>
-<li>jenkins</li>
-<li>jira</li>
-<li>Atlassian wiki</li>
-</ul>
-</li>
-<li>规范约束<ul>
-<li>注释</li>
-<li>命名</li>
-<li>git提交</li>
-<li>资源管理</li>
-<li>存档管理</li>
-</ul>
+<li><p><strong>什么是分布式文件系统</strong></p>
+<p> ​    分布式文件系统是指文件系统管理的物理存储资源不一定直接连接在本地节点上，而是通过计算机网络与<strong>节点(可简单的理解为一台计算机)</strong>相连。分布式文件系统的设计基于客户机/服务器模式。一个典型的网络可能包括多个供多用户访问的服务器。另外，对等特性允许一些系统扮演客户机和服务器的双重角色。 </p>
 </li>
 </ul>
+<ul>
+<li><p><strong>为什么会有分布式文件系统</strong></p>
+<p>​    分布式文件系统是面对互联网的需求而产生，互联网时代对海量数据如何存储？靠简单的增加硬盘的个数已经满足不了我们的要求，因为硬盘传输速度有限但是数据在急剧增长，另外我们还要要做好数据备份、数据安全等。<br>​    采用分布式文件系统可以将多个地点的文件系统通过网络连接起来，组成一个文件系统网络，结点之间通过网络进行通信，一台文件系统的存储和传输能力有限，我们让文件在多台计算机上存储，通过多台计算共同传输。</p>
+<p><strong>优点：</strong><br>  1、一台计算机的文件系统处理能力扩充到多台计算机同时处理。<br>  2、一台计算机挂了还有另外副本计算机提供数据。<br>  3、每台计算机可以放在不同的地域，这样用户就可以就近访问，提高访问速度。 </p>
+</li>
+</ul>
+<h3 id="主流分布式文件系统"><a href="#主流分布式文件系统" class="headerlink" title="主流分布式文件系统"></a>主流分布式文件系统</h3><p>NFS：网络文件系统</p>
+<p>GFS：可扩展的分布式文件系统</p>
+<p>HDSF：适合运行在通用硬件上的分布式文件系统</p>
+<h3 id="分布式文件服务提供商（三方云存储服务提供商）"><a href="#分布式文件服务提供商（三方云存储服务提供商）" class="headerlink" title="分布式文件服务提供商（三方云存储服务提供商）"></a>分布式文件服务提供商（三方云存储服务提供商）</h3><ul>
+<li><p>阿里云对象存储服务</p>
+</li>
+<li><p>七牛云存储</p>
+</li>
+<li><p>百度云存储</p>
+</li>
+</ul>
+<h3 id="fsatDFS简介"><a href="#fsatDFS简介" class="headerlink" title="fsatDFS简介"></a>fsatDFS简介</h3><p>​    FastDFS 是用 c 语言编写的一款开源的分布式文件系统。</p>
+<p>​    FastDFS 为互联网量身定制，充分考虑了<strong>冗余备份、负载均衡、线性扩容</strong>等机制，并注重<strong>高可用、高性能</strong>等指标，<strong>使用 FastDFS很容易搭建一套高性能的文件服务器集群提供文件上传、下载等服务</strong>。</p>
+<h4 id="（1）client-客户端"><a href="#（1）client-客户端" class="headerlink" title="（1）client 客户端"></a><strong>（1）client 客户端</strong></h4><p>​    作为业务请求的发起方，通过专有接口，使用TCP/IP协议与跟踪器服务器或存储节点进行数据交互</p>
+<h4 id="（2）Tracker-server-（跟踪服务器）"><a href="#（2）Tracker-server-（跟踪服务器）" class="headerlink" title="（2）Tracker server （跟踪服务器）"></a><strong>（2）Tracker server （跟踪服务器）</strong></h4><p>​    作用是负载均衡和调度，通过 Tracker server 在文件上传时可以根据一些策略找到 Storage server 提供文件上传服务</p>
+<h4 id="（3）Storage-server-（存储服务器）"><a href="#（3）Storage-server-（存储服务器）" class="headerlink" title="（3）Storage server （存储服务器）"></a>（3）Storage server （存储服务器）</h4><p>​    作用是文件存储，客户端上传的文件最终存储在 Storage 服务器上，Storageserver 没有实现自己的文件系统而是利用操作系统的文件系统来管理文件。可以将storage称为存储服务器。</p>
+<p>torage集群采用了分组存储方式。storage集群由一个或多个组构成，集群存储总容量为集群中所有组的存储容量之和。一个组由一台或多台存储服务器组成，组内的Storage server之间是平等关系，不同组的Storage server之间不会相互通信，同组内的Storage server之间会相互连接进行文件同步，从而保证同组内每个storage上的文件完全一致的。一个组的存储容量为该组内的存储服务器容量最小的那个，由此可见组内存储服务器的软硬件配置最好是一致的。</p>
+<p> 采用分组存储方式的好处是灵活、可控性较强。比如上传文件时，可以由客户端直接指定上传到的组也可以由tracker进行调度选择。一个分组的存储服务器访问压力较大时，可以在该组增加存储服务器来扩充服务能力（纵向扩容）。当系统容量不足时，可以增加组来扩充存储容量（横向扩容）。</p>
+<p><img src="..%5Csources%5C1.1.jpeg" alt="1.1"></p>
+<p>服务端两个角色：</p>
+<p><strong>Tracker</strong>：管理集群，tracker 也可以实现集群。每个 tracker 节点地位平等。收集 Storage 集群的状态。</p>
+<p><strong>Storage</strong>：实际保存文件 ，Storage 分为多个组，每个组之间保存的文件是不同的。每个组内部可以有多个成员，组成员内部保存的内容是一样的，组成员的地位是一致的，没有主从的概念。</p>
+<h4 id="文件上传及下载的流程"><a href="#文件上传及下载的流程" class="headerlink" title="文件上传及下载的流程"></a>文件上传及下载的流程</h4><h5 id="文件上传流程"><a href="#文件上传流程" class="headerlink" title="文件上传流程"></a>文件上传流程</h5><p><img src="..%5Csources%5C1.2.jpeg" alt="1.1"></p>
+<p><strong>客户端上传文件后存储服务器将文件 ID 返回给客户端，此文件 ID 用于以后访问该文件的索引信息。文件索引信息包括：组名，虚拟磁盘路径，数据两级目录，文件名。</strong></p>
+<p><img src="..%5Csources%5C1.3.jpeg" alt="img"></p>
+<p>组名：文件上传后所在的storage组名称，在文件上传成功后有storage服务器返回，需要客户端自行保存。</p>
+<p>虚拟磁盘路径：storage配置的虚拟路径，与磁盘选项store_path 对应。如果配置了store_path0则是M00，如果配置了store_path1则是M01，以此类推。</p>
+<p>数据两级目录：storage服务器在每个虚拟磁盘路径下创建的两级目录，用于存储数据文件。</p>
+<p>文件名：与文件上传时不同。是由存储服务器根据特定信息生成，文件名包含：源存储服务器IP地址、文件创建时间戳、文件大小、随机数和文件拓展名等信息。</p>
+<h5 id="文件下载流程"><a href="#文件下载流程" class="headerlink" title="文件下载流程"></a>文件下载流程</h5><p><img src="..%5Csources%5C1.4.jpeg" alt="img"></p>
+<p>tracker根据请求的文件路径即文件ID 来快速定义文件</p>
 
                 
 
@@ -362,9 +345,13 @@
                 <!-- Pager -->
                 <ul class="pager">
                     
+                        <li class="previous">
+                            <a href="/2019/12/11/MVC/" data-toggle="tooltip" data-placement="top" title="MVC面试">&larr; 上一篇</a>
+                        </li>
+                    
                     
                         <li class="next">
-                            <a href="/uncategorized/Maven" data-toggle="tooltip" data-placement="top" title="Maven总结">下一篇 &rarr;</a>
+                            <a href="/2019/12/08/hello-world/" data-toggle="tooltip" data-placement="top" title="Hello World">下一篇 &rarr;</a>
                         </li>
                     
                 </ul>
@@ -424,7 +411,11 @@
                     <h5><a href="/tags/">标签云</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/敏捷开发" title="敏捷开发">敏捷开发</a>
+                          <a class="tag" href="/tags/FastDFS" title="FastDFS">FastDFS</a>
+                        
+                          <a class="tag" href="/tags/面试" title="面试">面试</a>
+                        
+                          <a class="tag" href="/tags/分布式" title="分布式">分布式</a>
                         
                     </div>
                 </section>
@@ -638,7 +629,7 @@
 <script>
     // only load tagcloud.js in tag.html
     if ($('#tag_cloud').length !== 0) {
-        async("http://yoursite.com/uncategorized/AgileDev/js/jquery.tagcloud.js", function () {
+        async("http://yoursite.com/2019/12/11/fastDFS/index.html/js/jquery.tagcloud.js", function () {
             $.fn.tagcloud.defaults = {
                 //size: {start: 1, end: 1, unit: 'em'},
                 color: {

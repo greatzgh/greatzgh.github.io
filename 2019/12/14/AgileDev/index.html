@@ -15,11 +15,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          Maven总结 - 青争|编程
+          敏捷开发简介 - 青争|编程
         
     </title>
 
-    <link rel="canonical" href="http://yoursite.com/uncategorized/Maven">
+    <link rel="canonical" href="http://yoursite.com/2019/12/14/AgileDev/">
 
     <!-- Bootstrap Core CSS -->
 
@@ -117,12 +117,10 @@
                     <div class="post-heading" style="padding:40px">
                         <div class="tags">
                             
-                              <a class="tag" href="/tags/面试" title="面试">面试</a>
-                            
-                              <a class="tag" href="/tags/Maven" title="Maven">Maven</a>
+                              <a class="tag" href="/tags/敏捷开发" title="敏捷开发">敏捷开发</a>
                             
                         </div>
-                        <h1>Maven总结</h1>
+                        <h1>敏捷开发简介</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by zgh on
@@ -289,101 +287,73 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h2 id="Maven总结"><a href="#Maven总结" class="headerlink" title="Maven总结"></a>Maven总结</h2><h3 id="Maven核心功能"><a href="#Maven核心功能" class="headerlink" title="Maven核心功能"></a><strong>Maven核心功能</strong></h3><ul>
-<li>依赖管理</li>
-<li>项目构建<ul>
-<li>Maven自身集成Tomcat插件，可对项目进行编译、打包、测试、安装等操作</li>
-<li>使用命令可以对项目进行一键构建，操作系统中无需安装Eclipse和Tomcat</li>
+                <p>个人理解，随时更新。。。</p>
+<h1 id="敏捷开发简介"><a href="#敏捷开发简介" class="headerlink" title="敏捷开发简介"></a>敏捷开发简介</h1><p><strong>传统瀑布式开发</strong>，一般经历从需求分析到设计，再到编码实现、提交等几个步骤，前面的步骤对后面的如何工作起到了决定性作用，因此特点就是依赖性、耦合性非常强，改需求就是程序员的噩耗（由此我们常常听到产品经理和程序员打架的事情…）</p>
+<h3 id="一，什么是敏捷开发？"><a href="#一，什么是敏捷开发？" class="headerlink" title="一，什么是敏捷开发？"></a><strong>一，什么是敏捷开发？</strong></h3><p><strong><a href="https://baike.baidu.com/item/敏捷软件开发/7108658?fr=aladdin" target="_blank" rel="noopener">敏捷开发</a></strong> ，英文全称是：Agile software development。</p>
+<p>​    用官方的介绍就是：具体名称、理念、过程、术语都不尽相同，相对于“非敏捷”，更强调程序员团队与业务专家之间的紧密协作、面对面的沟通（认为比书面的文档更有效）、频繁交付新的软件版本、紧凑而自我组织型的团队、能够很好地适应需求变化的代码编写和团队组织方法，也更注重软件开发过程中人的作用。</p>
+<pre><code>敏捷开发不是写代码很快，而是一种模式，是一种能**应对快速变化需求**的软件开发能力。敏捷开发通常在大公司才能运行起来，使用敏捷开发时通常部门分布明确（部门、项目组、小团队）；人员定位明确（部长、项目经理、TeamLeader、开发、测试等等）；个人任务明确，人与人之间互不影响；通过各个会议（每天、半天、每周、每月）进行讨论和总结；代码提交严格，不合格就返回重新修改，直到提交成功。</code></pre><p>​    </p>
+<h3 id="二，使用场景？"><a href="#二，使用场景？" class="headerlink" title="二，使用场景？"></a><strong>二，使用场景？</strong></h3><ul>
+<li>项目规模相对庞大</li>
+<li>团队规模较大</li>
+<li>职能部门较完善<ul>
+<li>前端研发</li>
+<li>后端研发</li>
+<li>测试团队</li>
+<li>产品调研</li>
+<li>架构组</li>
+<li>运维部门</li>
+<li>运营部门</li>
+<li>视觉传达</li>
+<li>移动端团队</li>
+<li>售前团队</li>
+<li>售后团队</li>
+</ul>
+</li>
+<li>对项目研发效率要求较高<ul>
+<li>项目相关文档迭代速度较快</li>
+<li>项目相关文档规模较大<ul>
+<li>市场分析</li>
+<li>风险评估</li>
+<li>受众分析</li>
+<li>竞品分析</li>
+<li>接口文档</li>
+<li>需求文档</li>
+<li>架构api</li>
+<li>视觉资源</li>
+</ul>
+</li>
+<li>跨部门协同<ul>
+<li>部门在同一个办公场地，但没有穿插权限</li>
+<li>部门不在一个办公场地</li>
+<li>部门人数超级多，没办法准确找到对应的人</li>
 </ul>
 </li>
 </ul>
-<h3 id="jar包冲突问题"><a href="#jar包冲突问题" class="headerlink" title="jar包冲突问题?"></a><strong>jar包冲突问题?</strong></h3><ol>
-<li><p>Maven默认处理策略</p>
-<p>​    最短路径优先</p>
-<p>​    最先声明优先</p>
 </li>
-<li><p>移除依赖</p>
-<p>在pom.xml中使用 <code>&lt;exclusion&gt;</code>标签去排除冲突的jar包</p>
-</li>
-<li><p>版本锁定原则</p>
-<p>一般用在父项目中，在pom文件<code>&lt;properties&gt;</code>中设置jar包版本号，子模块引用jar包时直接引用父项目中的公共依赖，不需要定义版本号；</p>
-<p>父pom文件<code>&lt;dependencyManagement&gt;</code>：只是作为管理节点，且不实际引入资源</p>
-</li>
-</ol>
-<h3 id="仓库不存在所需jar包的解决办法"><a href="#仓库不存在所需jar包的解决办法" class="headerlink" title="仓库不存在所需jar包的解决办法?"></a><strong>仓库不存在所需jar包的解决办法?</strong></h3><ol>
-<li><p>下载所需jar包到本地</p>
-</li>
-<li><p>导入到本地仓库</p>
-<p>仓库中的<code>settings.xml</code>文件路径  +  jar包路径</p>
-<p>命令：</p>
-</li>
-</ol>
-<p><code>mvn install:install-file --settings D:\Java\Repository\settings.xml  -Dpackaging=jar -DgroupId=com.oracle -DartifactId=ojdbc6 -Dversion=11.2.0.3 -Dfile=E:\ojdbc6-11.2.0.3.jar</code></p>
-<ol start="3">
-<li>pom文件引入</li>
-</ol>
-<h3 id="Maven常用命令"><a href="#Maven常用命令" class="headerlink" title="Maven常用命令"></a><strong>Maven常用命令</strong></h3><p>每一个构建项目的命令都对应了maven底层一个插件。</p>
+</ul>
+<h3 id="三，敏捷内容"><a href="#三，敏捷内容" class="headerlink" title="三，敏捷内容"></a>三，敏捷内容</h3><p>devops 持续集成</p>
 <ul>
-<li><p>clean：删除项目中已经编译好的信息，删除target目录</p>
-</li>
-<li><p>compile：Maven工程的编译命令，用于编译项目的源代码，将<code>src/main/java</code>下的文件编译成class文件输出到target目录下。</p>
-</li>
-<li><p>test：使用合适的单元测试框架运行测试。</p>
-</li>
-<li><p>package：将编译好的代码打包成可分发的格式，如JAR，WAR。</p>
-</li>
-<li><p>install：安装包至本地仓库，以备本地的其它项目作为依赖使用。</p>
-</li>
-<li><p>deploy：复制最终的包至远程仓库，共享给其它开发人员和项目（通常和一次正式的发布相关）。</p>
-</li>
-</ul>
-<h3 id="对于一个多模块项目，如果管理项目依赖的版本？"><a href="#对于一个多模块项目，如果管理项目依赖的版本？" class="headerlink" title="对于一个多模块项目，如果管理项目依赖的版本？"></a><strong>对于一个多模块项目，如果管理项目依赖的版本？</strong></h3><ul>
-<li>通过在父模块中声明 <code>&lt;dependencyManagement &gt;</code> 和， 然后让子模块通过元素指定父模块，这样子模块在定义依赖是就可以只定义 <code>groupId</code> 和 <code>artifactId</code>，自动使用父模块的 <code>version</code> ，这样统一整个项目的依赖的版本。</li>
-</ul>
-<h3 id="Maven-生命周期是怎么样的？"><a href="#Maven-生命周期是怎么样的？" class="headerlink" title="Maven 生命周期是怎么样的？"></a>Maven 生命周期是怎么样的？</h3><p>Maven 中有三个独立的生命周期：</p>
-<ul>
-<li>1、Clean</li>
-<li>2、Default</li>
-<li>3、Site</li>
-</ul>
-<blockquote>
-<p>每个生命周期都有该特点：不管用户要求执行的命令对应生命周期中的哪一个阶段，Maven都会自动从当前生命周期的最初位置开始执行，直到完成用户下达的指令</p>
-</blockquote>
-<blockquote>
-<p>一个完整的项目构建过程通常包括清理、编译、测试、打包、集成测试、验证、部署等步骤，Maven 从中抽取了一套完善的、易扩展的生命周期。Maven 的生命周期是抽象的，其中的具体任务都交由插件来完成。Maven 为大多数构建任务编写并绑定了默认的插件，如针对编译的插件：<code>maven-compiler-plugin</code> 。用户也可自行配置或编写插件。</p>
-</blockquote>
-<p>Maven有三套相互独立的生命周期，分别是 Clean、Default 和 Site。每个生命周期包含一些阶段，阶段是有顺序的，后面的阶段依赖于前面的阶段。</p>
-<ul>
-<li>1、Clean 生命周期：清理项目，包含三个 phase ：<ul>
-<li>pre-clean：执行清理前需要完成的工作。</li>
-<li>clean：清理上一次构建生成的文件。</li>
-<li>post-clean：执行清理后需要完成的工作</li>
+<li>软件加持<ul>
+<li>git</li>
+<li>gitlab</li>
+<li>rap</li>
+<li>node</li>
+<li>npm</li>
+<li>gitbook</li>
+<li>markdown</li>
+<li>jenkins</li>
+<li>jira</li>
+<li>Atlassian wiki</li>
 </ul>
 </li>
-<li>2、Default 生命周期：构建项目，重要的 phase 如下：<ul>
-<li>validate：验证工程是否正确，所有需要的资源是否可用。</li>
-<li>compile：编译项目的源代码。</li>
-<li>test：使用合适的单元测试框架来测试已编译的源代码。这些测试不需要已打包和布署。</li>
-<li>package：把已编译的代码打包成可发布的格式，比如 jar、war 等。</li>
-<li>integration-test：如有需要，将包处理和发布到一个能够进行集成测试的环境。</li>
-<li>verify：运行所有检查，验证包是否有效且达到质量标准。</li>
-<li>install：把包安装到maven本地仓库，可以被其他工程作为依赖来使用。</li>
-<li>deploy：在集成或者发布环境下执行，将最终版本的包拷贝到远程的repository，使得其他的开发者或者工程可以共享。</li>
+<li>规范约束<ul>
+<li>注释</li>
+<li>命名</li>
+<li>git提交</li>
+<li>资源管理</li>
+<li>存档管理</li>
 </ul>
 </li>
-<li>3、Site 生命周期：建立和发布项目站点，phase 如下：<ul>
-<li>pre-site：生成项目站点之前需要完成的工作</li>
-<li>site：生成项目站点文档</li>
-<li>post-site：生成项目站点之后需要完成的工作</li>
-<li>site-deploy：将项目站点发布到服务器</li>
-</ul>
-</li>
-</ul>
-<p>各个生命周期相互独立，一个生命周期的阶段前后依赖。</p>
-<ul>
-<li><code>mvn clean</code> ：调用 Clean 生命周期的 clean 阶段，实际执行 pre-clean 和 clean 阶段</li>
-<li><code>mvn test</code> ：调用 Default 生命周期的 test 阶段，实际执行 test 以及之前所有阶段</li>
-<li><code>mvn clean install</code> ：调用 Clean 生命周期的 clean 阶段和 Default 生命周期 的 install 阶段，实际执行 pre-clean 和 clean ，install 以及之前所有阶段。</li>
 </ul>
 
                 
@@ -392,13 +362,9 @@
                 <!-- Pager -->
                 <ul class="pager">
                     
-                        <li class="previous">
-                            <a href="/uncategorized/AgileDev" data-toggle="tooltip" data-placement="top" title="敏捷开发简介">&larr; 上一篇</a>
-                        </li>
-                    
                     
                         <li class="next">
-                            <a href="/uncategorized/MVC" data-toggle="tooltip" data-placement="top" title="MVC面试">下一篇 &rarr;</a>
+                            <a href="/2019/12/14/Maven/" data-toggle="tooltip" data-placement="top" title="Maven总结">下一篇 &rarr;</a>
                         </li>
                     
                 </ul>
@@ -458,9 +424,7 @@
                     <h5><a href="/tags/">标签云</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/面试" title="面试">面试</a>
-                        
-                          <a class="tag" href="/tags/Maven" title="Maven">Maven</a>
+                          <a class="tag" href="/tags/敏捷开发" title="敏捷开发">敏捷开发</a>
                         
                     </div>
                 </section>
@@ -674,7 +638,7 @@
 <script>
     // only load tagcloud.js in tag.html
     if ($('#tag_cloud').length !== 0) {
-        async("http://yoursite.com/uncategorized/Maven/js/jquery.tagcloud.js", function () {
+        async("http://yoursite.com/2019/12/14/AgileDev/index.html/js/jquery.tagcloud.js", function () {
             $.fn.tagcloud.defaults = {
                 //size: {start: 1, end: 1, unit: 'em'},
                 color: {
