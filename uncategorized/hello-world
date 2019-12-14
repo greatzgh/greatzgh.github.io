@@ -8,18 +8,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="个人博客">
     <meta name="keyword"  content="">
     <link rel="shortcut icon" href="/img/ironman-draw.png">
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          MVC面试 - null
+          Hello World - 青争|编程
         
     </title>
 
-    <link rel="canonical" href="http://yoursite.com/2019/12/11/MVC/">
+    <link rel="canonical" href="http://yoursite.com/uncategorized/hello-world">
 
     <!-- Bootstrap Core CSS -->
 
@@ -117,16 +117,12 @@
                     <div class="post-heading" style="padding:40px">
                         <div class="tags">
                             
-                              <a class="tag" href="/tags/面试" title="面试">面试</a>
-                            
-                              <a class="tag" href="/tags/MVC" title="MVC">MVC</a>
-                            
                         </div>
-                        <h1>MVC面试</h1>
+                        <h1>Hello World</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by zgh on
-                            2019-12-11
+                            2019-12-08
                         </span>
                     </div>
                 
@@ -289,30 +285,19 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h1 id="MVC面试"><a href="#MVC面试" class="headerlink" title="MVC面试"></a>MVC面试</h1><h3 id="1-什么是MVC？"><a href="#1-什么是MVC？" class="headerlink" title="1. 什么是MVC？"></a>1. 什么是MVC？</h3><p>MVC是一个架构模式，分离了表现与交互；</p>
-<p>分为三个核心部件：</p>
-<ul>
-<li>模型：表示业务数据，提供数据给视图</li>
-<li>视图：用户看到并交互的界面</li>
-<li>控制器：接受用户的输入，并调用模型和视图去完成用户的需求</li>
-</ul>
-<p>典型mvc模式举例：jsp+servlet+javaBean</p>
-<h3 id="2-MVC的完成流程？"><a href="#2-MVC的完成流程？" class="headerlink" title="2. MVC的完成流程？"></a>2. MVC的完成流程？</h3><ul>
-<li>所有的终端用户请求被发送到控制器。</li>
-<li>控制器依赖请求去选择加载哪个模型，并把模型附加到对应的视图。</li>
-<li>附加了模型数据的最终视图做为响应发送给终端用户。</li>
-</ul>
-<h3 id="3-使用MVC的优缺点？"><a href="#3-使用MVC的优缺点？" class="headerlink" title="3. 使用MVC的优缺点？"></a>3. 使用MVC的优缺点？</h3><p><strong>优：</strong></p>
-<p>​    mvc不仅实现了功能模块和显示模块的分离，同时还提高了应用系统的可维护性、可扩展性、可移植性和组件的可复用性；总的来说：分层结构清晰，耦合性低，大型项目的复用性的到极大地提升；开发人员分工明确，提升开发效率；维护方便，降低维护成本</p>
-<p><strong>缺：</strong></p>
-<ol>
-<li><p>没有明确的定义，使用mvc需要精心的计划</p>
-<ol start="2">
-<li>不适合中小型应用程序，没有必要将mvc框架硬套在一个系统上</li>
-<li>层层之间虽然互相分离，但关联性太强</li>
-</ol>
-</li>
-</ol>
+                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo server</span></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo generate</span></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
                 
 
@@ -321,13 +306,9 @@
                 <ul class="pager">
                     
                         <li class="previous">
-                            <a href="/2019/12/14/Maven/" data-toggle="tooltip" data-placement="top" title="Maven总结">&larr; 上一篇</a>
+                            <a href="/uncategorized/fastDFS" data-toggle="tooltip" data-placement="top" title="FastDFS面试题">&larr; 上一篇</a>
                         </li>
                     
-                    
-                        <li class="next">
-                            <a href="/2019/12/11/fastDFS/" data-toggle="tooltip" data-placement="top" title="FastDFS面试题">下一篇 &rarr;</a>
-                        </li>
                     
                 </ul>
 
@@ -386,10 +367,6 @@
                     <h5><a href="/tags/">标签云</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/面试" title="面试">面试</a>
-                        
-                          <a class="tag" href="/tags/MVC" title="MVC">MVC</a>
-                        
                     </div>
                 </section>
                 
@@ -602,7 +579,7 @@
 <script>
     // only load tagcloud.js in tag.html
     if ($('#tag_cloud').length !== 0) {
-        async("http://yoursite.com/2019/12/11/MVC/index.html/js/jquery.tagcloud.js", function () {
+        async("http://yoursite.com/uncategorized/hello-world/js/jquery.tagcloud.js", function () {
             $.fn.tagcloud.defaults = {
                 //size: {start: 1, end: 1, unit: 'em'},
                 color: {
