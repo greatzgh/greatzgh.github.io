@@ -15,7 +15,7 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          Maven总结 - 青争|编程
+          Maven总结 - 青争|编程|技术博客
         
     </title>
 
@@ -289,7 +289,7 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h2 id="Maven总结"><a href="#Maven总结" class="headerlink" title="Maven总结"></a>Maven总结</h2><h3 id="Maven核心功能"><a href="#Maven核心功能" class="headerlink" title="Maven核心功能"></a><strong>Maven核心功能</strong></h3><ul>
+                <h3 id="1-Maven核心功能"><a href="#1-Maven核心功能" class="headerlink" title="1. Maven核心功能"></a><strong>1. Maven核心功能</strong></h3><ul>
 <li>依赖管理</li>
 <li>项目构建<ul>
 <li>Maven自身集成Tomcat插件，可对项目进行编译、打包、测试、安装等操作</li>
@@ -297,7 +297,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="jar包冲突问题"><a href="#jar包冲突问题" class="headerlink" title="jar包冲突问题?"></a><strong>jar包冲突问题?</strong></h3><ol>
+<h3 id="2-jar包冲突问题"><a href="#2-jar包冲突问题" class="headerlink" title="2. jar包冲突问题?"></a><strong>2. jar包冲突问题?</strong></h3><ol>
 <li><p>Maven默认处理策略</p>
 <p>​    最短路径优先</p>
 <p>​    最先声明优先</p>
@@ -310,7 +310,7 @@
 <p>父pom文件<code>&lt;dependencyManagement&gt;</code>：只是作为管理节点，且不实际引入资源</p>
 </li>
 </ol>
-<h3 id="仓库不存在所需jar包的解决办法"><a href="#仓库不存在所需jar包的解决办法" class="headerlink" title="仓库不存在所需jar包的解决办法?"></a><strong>仓库不存在所需jar包的解决办法?</strong></h3><ol>
+<h3 id="3-仓库不存在所需jar包的解决办法"><a href="#3-仓库不存在所需jar包的解决办法" class="headerlink" title="3. 仓库不存在所需jar包的解决办法?"></a><strong>3. 仓库不存在所需jar包的解决办法?</strong></h3><ol>
 <li><p>下载所需jar包到本地</p>
 </li>
 <li><p>导入到本地仓库</p>
@@ -322,7 +322,7 @@
 <ol start="3">
 <li>pom文件引入</li>
 </ol>
-<h3 id="Maven常用命令"><a href="#Maven常用命令" class="headerlink" title="Maven常用命令"></a><strong>Maven常用命令</strong></h3><p>每一个构建项目的命令都对应了maven底层一个插件。</p>
+<h3 id="4-Maven常用命令"><a href="#4-Maven常用命令" class="headerlink" title="4. Maven常用命令"></a><strong>4. Maven常用命令</strong></h3><p>每一个构建项目的命令都对应了maven底层一个插件。</p>
 <ul>
 <li><p>clean：删除项目中已经编译好的信息，删除target目录</p>
 </li>
@@ -337,10 +337,10 @@
 <li><p>deploy：复制最终的包至远程仓库，共享给其它开发人员和项目（通常和一次正式的发布相关）。</p>
 </li>
 </ul>
-<h3 id="对于一个多模块项目，如果管理项目依赖的版本？"><a href="#对于一个多模块项目，如果管理项目依赖的版本？" class="headerlink" title="对于一个多模块项目，如果管理项目依赖的版本？"></a><strong>对于一个多模块项目，如果管理项目依赖的版本？</strong></h3><ul>
+<h3 id="5-对于一个多模块项目，如果管理项目依赖的版本？"><a href="#5-对于一个多模块项目，如果管理项目依赖的版本？" class="headerlink" title="5. 对于一个多模块项目，如果管理项目依赖的版本？"></a><strong>5. 对于一个多模块项目，如果管理项目依赖的版本？</strong></h3><ul>
 <li>通过在父模块中声明 <code>&lt;dependencyManagement &gt;</code> 和， 然后让子模块通过元素指定父模块，这样子模块在定义依赖是就可以只定义 <code>groupId</code> 和 <code>artifactId</code>，自动使用父模块的 <code>version</code> ，这样统一整个项目的依赖的版本。</li>
 </ul>
-<h3 id="Maven-生命周期是怎么样的？"><a href="#Maven-生命周期是怎么样的？" class="headerlink" title="Maven 生命周期是怎么样的？"></a>Maven 生命周期是怎么样的？</h3><p>Maven 中有三个独立的生命周期：</p>
+<h3 id="6-Maven-生命周期是怎么样的？"><a href="#6-Maven-生命周期是怎么样的？" class="headerlink" title="6. Maven 生命周期是怎么样的？"></a>6. Maven 生命周期是怎么样的？</h3><p>Maven 中有三个独立的生命周期：</p>
 <ul>
 <li>1、Clean</li>
 <li>2、Default</li>
@@ -393,12 +393,12 @@
                 <ul class="pager">
                     
                         <li class="previous">
-                            <a href="/AgileDev/" data-toggle="tooltip" data-placement="top" title="敏捷开发简介">&larr; 上一篇</a>
+                            <a href="/敏捷开发/" data-toggle="tooltip" data-placement="top" title="敏捷开发简介">&larr; 上一篇</a>
                         </li>
                     
                     
                         <li class="next">
-                            <a href="/MVC/" data-toggle="tooltip" data-placement="top" title="MVC面试">下一篇 &rarr;</a>
+                            <a href="/MVC/" data-toggle="tooltip" data-placement="top" title="MVC总结">下一篇 &rarr;</a>
                         </li>
                     
                 </ul>
