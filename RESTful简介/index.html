@@ -15,11 +15,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-            青争|编程|技术博客
+          浅谈RESTful - 青争|编程|技术博客
         
     </title>
 
-    <link rel="canonical" href="http://yoursite.com/tags/GitHub/">
+    <link rel="canonical" href="http://yoursite.com/RESTful简介/">
 
     <!-- Bootstrap Core CSS -->
 
@@ -114,13 +114,19 @@
 			
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" style="z-index:2;">
                 
-				
-                    <div class="site-heading"  style="padding:40px">
-                        <h1>青争</h1>
-                        <!--<hr class="small">-->
-                        <span class="subheading">疾风知劲草</span>
+                    <div class="post-heading" style="padding:40px">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/RESTful" title="RESTful">RESTful</a>
+                            
+                        </div>
+                        <h1>浅谈RESTful</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by zgh on
+                            2019-12-24
+                        </span>
                     </div>
-                
                 
                 </div>
             </div>
@@ -268,325 +274,209 @@
 
 
     <!-- Main Content -->
-    <!-- Main Content -->
-<div class="container">
-    <div class="row">
-        
+    <!-- Modify by Yu-Hsuan Yen -->
 
-<!-- USE SIDEBAR -->
-    <!-- Post Container -->
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
             <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <p>看了几篇关于REST的文章，写的都比较深刻、长篇大论</p>
+<p>总结一下</p>
+<h3 id="是什么？"><a href="#是什么？" class="headerlink" title="是什么？"></a>是什么？</h3><p>REST是<strong>一种体系结构、一个标准、规范</strong></p>
+<p>通过 REST 可以实现系统的高性能、可伸缩、通用性、简单性、可修改性和可扩展等特性</p>
+<p>​    说起<code>HTTP</code>，<code>HTTP</code>的创始人认为人们一直在“错误的使用<code>HTTP</code>协议”，使用方式违背了其创建的初衷；原因是人们在使用HTTP协议时，总是“钟爱” <code>get</code>和<code>post</code>方法，而事实上一共有8种<code>HTTP</code>请求提交方式：<code>put</code>,<code>get</code>,<code>delete</code>,<code>post</code>,<code>head</code>,<code>options</code>,<code>connect</code>,<code>trace</code></p>
+<p>传统下的API接口使用时混乱无序，而REST开发方式解决了这种现象；</p>
+<p><strong>传统错误实例：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">https:<span class="comment">//localhost:8080/myweb/getUserById?id=1</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">https:<span class="comment">//localhost:8080/myweb/user/getById?id=1</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">https:<span class="comment">//localhost:8080/myweb/x/y?id=1</span></span></pre></td></tr></table></figure>
+
+<p><strong>REST风格使用规则：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">GET（SELECT）：从服务器取出资源（一项或多项）。</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">POST（CREATE）：在服务器新建一个资源。</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">PUT（UPDATE）：在服务器更新资源（客户端提供完整资源数据）。</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">PATCH（UPDATE）：在服务器更新资源（客户端提供需要修改的资源数据）。</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">DELETE（DELETE）：从服务器删除资源。</span></pre></td></tr></table></figure>
+
+<p><strong>传统与REST风格对比：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;localhost:8080&#x2F;myweb&#x2F;getDogs --&gt; GET &#x2F;rest&#x2F;api&#x2F;dogs 获取所有小狗狗 </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;localhost:8080&#x2F;myweb&#x2F;addDogs --&gt; POST &#x2F;rest&#x2F;api&#x2F;dogs 添加一个小狗狗 </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;localhost:8080&#x2F;myweb&#x2F;updateDogs&#x2F;:dog_id --&gt; PUT &#x2F;rest&#x2F;api&#x2F;dogs&#x2F;:dog_id 修改</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;localhost:8080&#x2F;myweb&#x2F;deleteDogs&#x2F;:dog_id --&gt; DELETE &#x2F;rest&#x2F;api&#x2F;dogs&#x2F;:dog_id 删除</span></pre></td></tr></table></figure>
+
+<p>​    REST是<strong>面向资源</strong>的，强调<strong>描述应用程序的事物和名词</strong>；REST将资源的状态以最适合客户端或服务端的形式从服务器端转移到客户端。（或反过来）。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
+<li><code>RESTful</code>只是一种风格，而不是一种强制的标准</li>
+<li>是面向资源的，用URL描述资源，而不是描述行为</li>
+<li>使用HTTP方法（<code>get\post\delete\put</code>）描述行为</li>
+<li>使用HTTP状态码（200，403…）来表示不同的结果</li>
+<li>使用JSON格式交互数据</li>
+</ul>
+<h3 id="优点-amp-缺点"><a href="#优点-amp-缺点" class="headerlink" title="优点&amp;缺点"></a>优点&amp;缺点</h3><p><strong>优点</strong>：</p>
+<ul>
+<li><p>统一了数据操作的接口，仅通过HTTP方法，就可以完成对数据的所有增删查改工作</p>
+</li>
+<li><p>因为他对uri进行了限制，只用于定义资源。这样看起来比较容易理解。尤其是对简单的对象的增删改查，很好理解</p>
+</li>
+</ul>
+<p><strong>缺点</strong>：</p>
+<ul>
+<li>是因为这种限制，导致设计uri变得复杂了。尤其是复杂的关系，操作，资源集合，硬性套用rest原则设计非常困难</li>
+</ul>
+<h3 id="RESTful-系统"><a href="#RESTful-系统" class="headerlink" title="RESTful 系统"></a>RESTful 系统</h3><p><code>RESTful Web</code> 服务与传统的 MVC 开发一个关键区别是返回给客户端的内容的创建方式：</p>
+<ul>
+<li><p>传统的 MVC 模式开发会直接返回给客户端一个视图；</p>
+</li>
+<li><p><code>RESTful Web</code> 服务一般会将返回的数据以<code>JSON</code>的形式返回，这也就是现在所推崇的<strong>前后端分离开发</strong></p>
+</li>
+</ul>
+<h4 id="特征"><a href="#特征" class="headerlink" title="特征"></a>特征</h4><ul>
+<li><strong>客户-服务器</strong>，提供服务的服务器和使用服务的客户需要被隔离对待。</li>
+<li><strong>无状态</strong>，来自客户的每一个请求必须包含服务器处理该请求所需的所有信息。换句话说，服务器端不能存储来自某个客户的某个请求中的信息，并在该客户的其他请求中使用。</li>
+<li><strong>可缓存</strong>，服务器必须让客户知道请求是否可以被缓存</li>
+<li><strong>分层系统</strong>，服务器和客户之间的通信必须被这样标准化：允许服务器和客户之间的中间层（Ross：代理，网关等）可以代替服务器对客户的请求进行回应，而且这些对客户来说不需要特别支持。</li>
+<li><strong>统一接口</strong>，客户和服务器之间通信的方法必须是统一化的；crud操作对应HTTP方法：GET，POST，PUT，DELETE</li>
+<li><strong>支持按需代码</strong>，服务器可以提供一些代码或者脚本并在客户的运行环境中执行。这条准则是这些准则中唯一不必必须满足的一条。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.SpringBootDemo.conroller;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.GetMapping;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RestController;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@RestController</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@RequestMapping</span>(<span class="string">"test"</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloController</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">    <span class="meta">@GetMapping</span>(<span class="string">"hello"</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">sqlHello</span><span class="params">()</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">return</span> <span class="string">"hello world"</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+
+
+<p>部分引用：</p>
+<p>​    <a href="https://blog.csdn.net/qq_21383435/article/details/80032375" target="_blank" rel="noopener">https://blog.csdn.net/qq_21383435/article/details/80032375</a></p>
+<p>​    <a href="https://www.jianshu.com/p/91600da4df95" target="_blank" rel="noopener">https://www.jianshu.com/p/91600da4df95</a></p>
 
                 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <!-- 归档列表 -->
-            
-            
 
-             <!-- 归档列表 -->
-
-            
-            <div class="one-tag-list">
-                <span class="fa fa-calendar-times-o listing-seperator" id="2019">
-                    <span class="tag-text">2019</span>
-                </span>
-                <ul>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    12-24
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/Spring-data-JPA简介/" style="color: #0085a1">
-                        <span>
-                            Spring data JPA简介
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    12-24
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/RESTful简介/" style="color: #0085a1">
-                        <span>
-                            浅谈RESTful
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    12-15
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/博客图床解决方案/" style="color: #0085a1">
-                        <span>
-                            图床解决方案
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    12-15
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/Github高效条件搜索/" style="color: #0085a1">
-                        <span>
-                            Github高效条件搜索
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    12-14
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/敏捷开发/" style="color: #0085a1">
-                        <span>
-                            浅谈敏捷开发
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    12-14
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/Maven/" style="color: #0085a1">
-                        <span>
-                            Maven问题总结
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    12-11
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/MVC/" style="color: #0085a1">
-                        <span>
-                            MVC
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/Spring-data-JPA简介/" data-toggle="tooltip" data-placement="top" title="Spring data JPA简介">&larr; 上一篇</a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/博客图床解决方案/" data-toggle="tooltip" data-placement="top" title="图床解决方案">下一篇 &rarr;</a>
+                        </li>
+                    
                 </ul>
+
+                <br>
+
+                <!--打赏-->
+                
+                <!--打赏-->
+
+                <br>
+                <!--分享-->
+                
+                    <div class="social-share"  data-wechat-qrcode-helper="" align="center"></div>
+                    <!--  css & js -->
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+                
+                <!--分享-->
+                <br>                       
+                
+                <!-- require APlayer -->
+                
+
+                <!-- disqus comment start -->
+                
+                <!-- disqus comment end -->
+
+                
+				
+				<!-- Valine start -->
+					<div id="vcomments"></div>
+					<script>
+						new Valine({
+							el: '#vcomments',
+							appId: 'k30jTDBvMLuegMyQb8KyqFW3-gzGzoHsz',
+							appKey: 'EmG13REwWcIlqmS01GRP6fuk'
+						})
+					</script>
+				
             </div>
-            
 
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
 
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">标签云</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/RESTful" title="RESTful">RESTful</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://blog.xiao-gy.tk" target="_blank">xiao-gy&#39;s blog</a></li>
+                    
+                </ul>
+                
+            </div>
         </div>
     </div>
-</div>
+</article>
 
 
 
-                <!-- 如果开启评论功能 -->
-                
-            </div>
-
-          <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-        <!-- Featured Tags -->
-
-<section>
-    <!-- no hr -->
-    <h5><a href="/tags/">标签云</a></h5>
-    <div class="tags">
-        
-            
-            <a href="/tags/面试" title="面试" rel="2">面试</a>
-            
-        
-            
-            <a href="/tags/MVC" title="MVC" rel="1">MVC</a>
-            
-        
-            
-            <a href="/tags/Maven" title="Maven" rel="1">Maven</a>
-            
-        
-            
-            <a href="/tags/敏捷开发" title="敏捷开发" rel="1">敏捷开发</a>
-            
-        
-            
-            <a href="/tags/GitHub" title="GitHub" rel="1">GitHub</a>
-            
-        
-            
-            <a href="/tags/图床" title="图床" rel="1">图床</a>
-            
-        
-            
-            <a href="/tags/RESTful" title="RESTful" rel="1">RESTful</a>
-            
-        
-            
-            <a href="/tags/JPA" title="JPA" rel="1">JPA</a>
-            
-        
-    </div>
-</section>
 
 
-        <hr>
-    
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-    <h5><a href="/about/">关于</a></h5>
-    <div class="short-about">
 
-        
-            <img id = "avatar_pic" src="/img/avatar/logo.jpg" />
-        
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
 
-        
-            <p>疾风知劲草</p>
-        
-
-        <!-- SNS Link -->
-        <ul class="list-inline">
-            
-            
-            
-
-            
-                <li>
-                    <a target="_blank" href="http://weibo.com/广辉海阔天空zgh">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-            
-
-            
-
-            
-                <li>
-                    <a target="_blank"  href="https://github.com/greatzgh">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-            
-            
-            
-            
-        </ul>
-    </div>
-</section>
-
-        <hr>
-    
-        
-  <h5>最近发表</h3>
-  <div class="widget">
-    <ul>
-      
-        <li>
-          <a href="/Spring-data-JPA%E7%AE%80%E4%BB%8B/">Spring data JPA简介</a>
-        </li>
-      
-        <li>
-          <a href="/RESTful%E7%AE%80%E4%BB%8B/">浅谈RESTful</a>
-        </li>
-      
-        <li>
-          <a href="/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E5%BA%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">图床解决方案</a>
-        </li>
-      
-        <li>
-          <a href="/Github%E9%AB%98%E6%95%88%E6%9D%A1%E4%BB%B6%E6%90%9C%E7%B4%A2/">Github高效条件搜索</a>
-        </li>
-      
-        <li>
-          <a href="/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/">浅谈敏捷开发</a>
-        </li>
-      
-    </ul>
-  </div>
-
-        <hr>
-    
-        
-    <h5>归档</h5>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a><span class="archive-list-count">7</span></li></ul>
-    </div>
-
-        <hr>
-    
-        <!-- Friends Blog -->
-
-<h5>友链</h5>
-<ul class="list-inline">
-
-    
-        <li><a href="https://blog.xiao-gy.tk" target="_blank">xiao-gy&#39;s blog</a></li>
-    
-</ul>
-
-
-        <hr>
-    
-        <!-- Categories -->
-
-        <hr>
-    
-</div>
-
-
-        
-    </div>
-</div>
 
 
     <!-- Footer -->
@@ -740,7 +630,7 @@
 <script>
     // only load tagcloud.js in tag.html
     if ($('#tag_cloud').length !== 0) {
-        async("http://yoursite.com/tags/GitHub/index.html/js/jquery.tagcloud.js", function () {
+        async("http://yoursite.com/RESTful%E7%AE%80%E4%BB%8B/index.html/js/jquery.tagcloud.js", function () {
             $.fn.tagcloud.defaults = {
                 //size: {start: 1, end: 1, unit: 'em'},
                 color: {

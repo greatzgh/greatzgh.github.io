@@ -15,7 +15,7 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          敏捷开发简介 - 青争|编程|技术博客
+          图床解决方案 - 青争|编程|技术博客
         
     </title>
 
@@ -117,10 +117,10 @@
                     <div class="post-heading" style="padding:40px">
                         <div class="tags">
                             
-                              <a class="tag" href="/tags/敏捷开发" title="敏捷开发">敏捷开发</a>
+                              <a class="tag" href="/tags/图床" title="图床">图床</a>
                             
                         </div>
-                        <h1>敏捷开发简介</h1>
+                        <h1>图床解决方案</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by zgh on
@@ -287,82 +287,30 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <p>个人理解，随时更新。。。</p>
-<p><strong>传统瀑布式开发</strong>，一般经历从需求分析到设计，再到编码实现、提交等几个步骤，前面的步骤对后面的如何工作起到了决定性作用，因此特点就是依赖性、耦合性非常强，改需求就是程序员的噩耗（由此我们常常听到产品经理和程序员打架的事情…）</p>
-<h3 id="一，什么是敏捷开发？"><a href="#一，什么是敏捷开发？" class="headerlink" title="一，什么是敏捷开发？"></a><strong>一，什么是敏捷开发？</strong></h3><p><strong><a href="https://baike.baidu.com/item/敏捷软件开发/7108658?fr=aladdin" target="_blank" rel="noopener">敏捷开发</a></strong> ，英文全称是：Agile software development。</p>
-<p>​    用官方的介绍就是：具体名称、理念、过程、术语都不尽相同，相对于“非敏捷”，更强调程序员团队与业务专家之间的紧密协作、面对面的沟通（认为比书面的文档更有效）、频繁交付新的软件版本、紧凑而自我组织型的团队、能够很好地适应需求变化的代码编写和团队组织方法，也更注重软件开发过程中人的作用。</p>
-<blockquote>
-<pre><code>敏捷开发不是写代码很快，而是一种模式，是一种能应对快速变化需求的软件开发能力。敏捷开发通常在大公司才能运行起来，使用敏捷开发时通常部门分布明确（部门、项目组、小团队）；人员定位明确（部长、项目经理、TeamLeader、开发、测试等等）；个人任务明确，人与人之间互不影响；通过各个会议（每天、半天、每周、每月）进行讨论和总结；代码提交严格，不合格就返回重新修改，直到提交成功。</code></pre></blockquote>
-<p>​    </p>
-<h3 id="二，使用场景？"><a href="#二，使用场景？" class="headerlink" title="二，使用场景？"></a><strong>二，使用场景？</strong></h3><ul>
-<li>项目规模相对庞大</li>
-<li>团队规模较大</li>
-<li>职能部门较完善<ul>
-<li>前端研发</li>
-<li>后端研发</li>
-<li>测试团队</li>
-<li>产品调研</li>
-<li>架构组</li>
-<li>运维部门</li>
-<li>运营部门</li>
-<li>视觉传达</li>
-<li>移动端团队</li>
-<li>售前团队</li>
-<li>售后团队</li>
-</ul>
-</li>
-<li>对项目研发效率要求较高<ul>
-<li>项目相关文档迭代速度较快</li>
-<li>项目相关文档规模较大<ul>
-<li>市场分析</li>
-<li>风险评估</li>
-<li>受众分析</li>
-<li>竞品分析</li>
-<li>接口文档</li>
-<li>需求文档</li>
-<li>架构api</li>
-<li>视觉资源</li>
-</ul>
-</li>
-<li>跨部门协同<ul>
-<li>部门在同一个办公场地，但没有穿插权限</li>
-<li>部门不在一个办公场地</li>
-<li>部门人数超级多，没办法准确找到对应的人</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="三，敏捷内容"><a href="#三，敏捷内容" class="headerlink" title="三，敏捷内容"></a>三，敏捷内容</h3><p>devops 持续集成</p>
+                <p>图床简单来说就是一个存储图片的服务器</p>
+<p>现在使用hexo博客系统，使用Markdown编写博客，其缺点就是图片的管理比较繁琐；因此推荐使用第三方图床，将图片存入图床，使用时引用Markdown格式就好了</p>
+<p>常见图床解决方案：</p>
 <ul>
-<li>软件加持<ul>
-<li>git</li>
-<li>gitlab</li>
-<li>rap</li>
-<li>node</li>
-<li>npm</li>
-<li>gitbook</li>
-<li>markdown</li>
-<li>jenkins</li>
-<li>jira</li>
-<li>Atlassian wiki</li>
+<li>七牛云（前提有域名，要求域名备案）</li>
+<li>SM.MS(大名鼎鼎，有数量限制，也是不错的选择，不少人在用)</li>
+<li>阿里云OSS（自己在用，一年9元，挺划算的）</li>
+<li>Github图床（免费，薅羊毛，推荐<a href="https://www.bilibili.com/read/cv4065587）" target="_blank" rel="noopener">https://www.bilibili.com/read/cv4065587）</a></li>
 </ul>
-</li>
-<li>规范约束<ul>
-<li>注释</li>
-<li>命名</li>
-<li>git提交</li>
-<li>资源管理</li>
-<li>存档管理</li>
-</ul>
-</li>
-</ul>
+<p>图床管理工具：<strong>PicGo</strong></p>
+<p>github地址:<a href="https://github.com/Molunerfinn/PicGo" target="_blank" rel="noopener">https://github.com/Molunerfinn/PicGo</a></p>
+<p>下载地址：<a href="https://github.com/Molunerfinn/PicGo/releases" target="_blank" rel="noopener">https://github.com/Molunerfinn/PicGo/releases</a></p>
+<p><img src="https://code0111-myblog-img.oss-cn-beijing.aliyuncs.com/img/20191215223112.png" alt=""></p>
+<p><img src="https://code0111-myblog-img.oss-cn-beijing.aliyuncs.com/img/20191215235223.png" alt=""></p>
 
                 
 
                 <hr>
                 <!-- Pager -->
                 <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/RESTful简介/" data-toggle="tooltip" data-placement="top" title="浅谈RESTful">&larr; 上一篇</a>
+                        </li>
                     
                     
                         <li class="next">
@@ -426,7 +374,7 @@
                     <h5><a href="/tags/">标签云</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/敏捷开发" title="敏捷开发">敏捷开发</a>
+                          <a class="tag" href="/tags/图床" title="图床">图床</a>
                         
                     </div>
                 </section>
